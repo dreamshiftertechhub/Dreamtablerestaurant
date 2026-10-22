@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 2440,
+      "bodyTextHash": "070770296c29067fe8acfe3fce7efa4dea878132a597f1cc86fc763e8b7bd72b",
+      "bodyTextPrefix": "Dream TABLE MENU ORDER RESERVATIONS OUR STORY TRACK ORDER VICTOR",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/dreamtable-home.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 2405,
+      "bodyTextHash": "65a0a0e8d2d8540a573b79d1b1f9030e21e28b7f6a72c119840a93a7326ea1f2",
+      "bodyTextPrefix": "Dream TABLE VICTORIA ISLAND · LAGOS Dream Table Come hungry. Lea",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/dreamtable-home-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/dreamtable-home.json"
+}

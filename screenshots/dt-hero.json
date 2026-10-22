@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 2483,
+      "bodyTextHash": "11310cfef4aee7ca2cdb77ccf25f4de3a943dc594db2c40e571dbe1368040b50",
+      "bodyTextPrefix": "DreamTable RESTAURANT MENU ORDER RESERVATIONS CATERING OUR STORY",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/dt-hero.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 2451,
+      "bodyTextHash": "4581fdebf34f097ab0392bc3d50f8f396afcb7a8796a110000168d76e8134edb",
+      "bodyTextPrefix": "DreamTable RESTAURANT THE Dream Table RESTAURANT Come hungry. Le",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/dt-hero-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/dt-hero.json"
+}

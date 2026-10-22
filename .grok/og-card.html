@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mimi's</title>
+  <style>
+    @font-face {
+      font-family: "Great Vibes";
+      src: url("fonts/GreatVibes-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Cinzel";
+      src: url("fonts/Cinzel-Regular.ttf") format("truetype");
+      font-weight: 400 900;
+      font-style: normal;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #FFF8F2;
+    }
+    .stage {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      background:
+        radial-gradient(ellipse at 50% 46%, #ffffff 0%, #FFF8F2 52%, #f4e6d6 100%);
+      color: #102A72;
+    }
+    .grain {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.055;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .frame {
+      position: absolute;
+      inset: 26px;
+      border: 1.5px solid #102A72;
+    }
+    .frame-inner {
+      position: absolute;
+      inset: 8px;
+      border: 0.75px solid rgba(16, 42, 114, 0.55);
+    }
+    .corner {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-color: #D71920;
+      border-style: solid;
+    }
+    .corner.tl { top: 38px; left: 38px; border-width: 1.5px 0 0 1.5px; }
+    .corner.tr { top: 38px; right: 38px; border-width: 1.5px 1.5px 0 0; }
+    .corner.bl { bottom: 38px; left: 38px; border-width: 0 0 1.5px 1.5px; }
+    .corner.br { bottom: 38px; right: 38px; border-width: 0 1.5px 1.5px 0; }
+    .meta {
+      position: absolute;
+      top: 54px;
+      left: 64px;
+      right: 64px;
+      display: flex;
+      justify-content: space-between;
+      font-family: Cinzel, serif;
+      font-size: 11px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: #102A72;
+    }
+    .lockup {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -52%);
+      width: 760px;
+      text-align: center;
+    }
+    .kicker {
+      font-family: Cinzel, serif;
+      font-size: 13px;
+      letter-spacing: 0.52em;
+      text-transform: uppercase;
+      color: #102A72;
+    }
+    .rule {
+      width: 64px;
+      height: 1.5px;
+      background: #D71920;
+      margin: 20px auto 14px;
+    }
+    .rule.below {
+      margin: 10px auto 18px;
+    }
+    .wordmark {
+      font-family: "Great Vibes", cursive;
+      font-size: 172px;
+      line-height: 0.82;
+      color: #D71920;
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+    .tag {
+      font-family: Cinzel, serif;
+      font-size: 18px;
+      letter-spacing: 0.46em;
+      text-transform: uppercase;
+      color: #102A72;
+    }
+    .footer {
+      position: absolute;
+      bottom: 52px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: Cinzel, serif;
+      font-size: 11px;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: #102A72;
+    }
+    .motif {
+      position: absolute;
+      top: 50%;
+      width: 132px;
+      height: 132px;
+      transform: translateY(-50%);
+      opacity: 0.92;
+    }
+    .motif.left { left: 78px; }
+    .motif.right { right: 78px; }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="grain"></div>
+    <div class="frame"><div class="frame-inner"></div></div>
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <div class="meta">
+      <span>Lagos</span>
+      <span>The Table</span>
+    </div>
+
+    <svg class="motif left" viewBox="0 0 132 132" aria-hidden="true">
+      <circle cx="66" cy="66" r="62" fill="none" stroke="#102A72" stroke-width="1.4"/>
+      <circle cx="66" cy="66" r="52" fill="none" stroke="#102A72" stroke-width="0.7"/>
+      <circle cx="66" cy="66" r="34" fill="#D71920"/>
+      <circle cx="66" cy="66" r="14" fill="#FFF8F2"/>
+    </svg>
+
+    <svg class="motif right" viewBox="0 0 132 132" aria-hidden="true">
+      <g fill="#D71920" transform="translate(66 66)">
+        <ellipse cx="0" cy="-22" rx="14" ry="24"/>
+        <ellipse cx="0" cy="-22" rx="14" ry="24" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-22" rx="14" ry="24" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-22" rx="14" ry="24" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-22" rx="14" ry="24" transform="rotate(288)"/>
+        <circle cx="0" cy="0" r="11" fill="#102A72"/>
+        <circle cx="0" cy="0" r="4.5" fill="#FFF8F2"/>
+      </g>
+    </svg>
+
+    <div class="lockup">
+      <div class="kicker">Nigerian Kitchen</div>
+      <div class="rule"></div>
+      <p class="wordmark">Mimi's</p>
+      <div class="rule below"></div>
+      <div class="tag">A Lagos Table</div>
+    </div>
+
+    <div class="footer">Premium · Modern · Nigerian</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/pass",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 684,
+      "bodyTextHash": "0e5744f49a5e907ba291cdc22bab1ab8205120060fcca6996ee77f8e442dbb03",
+      "bodyTextPrefix": "DreamTable RESTAURANT MENU ORDER RESERVATIONS CATERING OUR STORY",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/pass.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 666,
+      "bodyTextHash": "b9de9e644935339efcf4daeb8470dbf3c5b20d50b88f44f46d249fdf4b121984",
+      "bodyTextPrefix": "DreamTable RESTAURANT SIGN IN LIVE FROM THE KITCHEN The pass Wha",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/pass-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/pass.json"
+}

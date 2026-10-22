@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="DreamTable">
+  <rect width="32" height="32" rx="7" fill="#FFF8F2"/>
+  <path fill="#D71920" d="M6.4 7.2h19.2v3.5h-7.55v14.1h-4.1V10.7H6.4V7.2z"/>
+  <path fill="#D71920" d="M8.2 11.4h5.1c4.55 0 7.35 2.55 7.35 6.55 0 4.05-2.8 6.6-7.35 6.6H8.2v-13.15zm3.7 3.25v6.65h1.5c2.35 0 3.55-1.35 3.55-3.35s-1.2-3.3-3.55-3.3H11.9z"/>
+</svg>

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/login",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 218,
+      "bodyTextHash": "0e1c9a846d115bb63ead381fdda937cc906df8e23b6364c71ea6551fa1a1b40d",
+      "bodyTextPrefix": "DreamTable RESTAURANT Welcome back. Guests keep their orders and",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/login.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 218,
+      "bodyTextHash": "0e1c9a846d115bb63ead381fdda937cc906df8e23b6364c71ea6551fa1a1b40d",
+      "bodyTextPrefix": "DreamTable RESTAURANT Welcome back. Guests keep their orders and",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/login-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/login.json"
+}

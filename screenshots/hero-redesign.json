@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 2545,
+      "bodyTextHash": "5f3b7b9f84df9f04bf2fbe5c59e4c7709aa126bbb57876795c89e4d7e58512a7",
+      "bodyTextPrefix": "DreamTable RESTAURANT MENU ORDER RESERVATIONS CATERING OUR STORY",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/hero-redesign.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 2509,
+      "bodyTextHash": "5d748a2c9f27e6fca8711670e68294eb4bd8e2c52f4481449ccc907bd3fd44a3",
+      "bodyTextPrefix": "DreamTable RESTAURANT Open now · Delivering in Lagos Come hungry",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/hero-redesign-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/hero-redesign.json"
+}

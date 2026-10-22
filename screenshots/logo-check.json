@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Mimi's — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 2240,
+      "bodyTextHash": "ca303fe747e8b0a12f375e2ca7a57b8b8b27892b42cc6373931d69bd6e341b08",
+      "bodyTextPrefix": "MENU ORDER RESERVATIONS OUR STORY TRACK ORDER VICTORIA ISLAND · ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/logo-check.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Mimi's — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 2205,
+      "bodyTextHash": "c1470285634626bdd1717cbef6729fbdf805d6990fe3fc895401434cce9b82f5",
+      "bodyTextPrefix": "VICTORIA ISLAND · LAGOS Mimi's Come hungry. Leave talking. Bold ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/logo-check-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/logo-check.json"
+}
