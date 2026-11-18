@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-NZYk81nU.js";import{t}from"./site-shell-Xqoh8A_h.js";import{t as n}from"./menu-experience-DZ1ye02x.js";var r=e();function i(){return(0,r.jsx)(t,{children:(0,r.jsx)(n,{kicker:`Order`,title:`Send it to the kitchen.`})})}export{i as component};

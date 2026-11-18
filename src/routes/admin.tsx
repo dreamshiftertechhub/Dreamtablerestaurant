@@ -4,7 +4,7 @@ import { Logo } from "@/components/brand/logo";
 import { Button } from "@/components/ui/button";
 import { UserButton } from "@/lib/auth/gates";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
-import { claimHouse, getMySeat, type Seat } from "@/lib/house.functions";
+import { claimHouse, getMySeat, resetKitchen, type Seat } from "@/lib/house.functions";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/admin")({ component: AdminLayout });
@@ -72,6 +72,28 @@ function AdminLayout() {
           >
             {claiming ? "Opening…" : "Take the keys"}
           </Button>
+          <Button
+            variant="outline"
+            className="mt-3"
+            disabled={claiming}
+            onClick={() => {
+              setClaiming(true);
+              setError("");
+              void resetKitchen()
+                .then(() => claimHouse())
+                .then((result) => {
+                  if (!result.ok) setError(result.error);
+                  else setSeat(result.seat);
+                })
+                .catch(() => setError("Could not reset the kitchen login."))
+                .finally(() => setClaiming(false));
+            }}
+          >
+            Reset kitchen login
+          </Button>
+          <p className="mt-4 text-sm text-muted">
+            Reset clears the old owner, then this signed-in account becomes the owner. Staff you add later sign in with the email and password you give them.
+          </p>
         </div>
       </div>
     );

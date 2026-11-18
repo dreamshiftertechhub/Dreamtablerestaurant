@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/menu",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 602,
+      "bodyTextHash": "87815861a4dacb5b8fca4beada6900ef2ca17704ca9c46fc72724b9f6ae4d238",
+      "bodyTextPrefix": "DreamTable RESTAURANT MENU ORDER RESERVATIONS CATERING OUR STORY",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/menu-match.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "DreamTable — Come hungry. Leave talking.",
+      "hasCanvas": false,
+      "bodyTextLen": 554,
+      "bodyTextHash": "04e5459697944609a1247afd050fe11d99dbc638b6c3d70005fc634e15d687af",
+      "bodyTextPrefix": "DreamTable THE MENU What are you in the mood for? ALL RICE GRILL",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/menu-match-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/menu-match.json"
+}

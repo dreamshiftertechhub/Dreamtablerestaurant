@@ -16,7 +16,7 @@ import {
   useMimi,
 } from "@/store/use-mimi";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
-import { saveHouseOrder } from "@/lib/house.functions";
+import { fileKitchenOrder, saveHouseOrder } from "@/lib/house.functions";
 import { RESTAURANT_ADDRESS, type Fulfillment, type PaymentMethod } from "@/data/types";
 import { TransferDetails } from "@/components/order/transfer-details";
 
@@ -74,6 +74,7 @@ function CheckoutPage() {
           instructions,
         },
       });
+      void fileKitchenOrder({ data: { order } }).catch(() => {});
       if (user && !user.isDevFallback) {
         void saveHouseOrder({ data: { order } }).catch(() => {});
       }

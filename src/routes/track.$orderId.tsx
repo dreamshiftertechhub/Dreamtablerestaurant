@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Phone } from "lucide-react";
 import { SiteShell } from "@/components/layout/site-shell";
@@ -5,9 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { LiveMap } from "@/components/order/live-map";
 import { TrackingTimeline } from "@/components/order/timeline";
-import { ORDER_STATUS_LABELS } from "@/data/types";
+import { ORDER_STATUS_LABELS, type Order } from "@/data/types";
 import { formatNaira } from "@/lib/format";
 import { TransferDetails } from "@/components/order/transfer-details";
+import { getKitchenOrder } from "@/lib/house.functions";
 import { useMimi } from "@/store/use-mimi";
 
 export const Route = createFileRoute("/track/$orderId")({ component: TrackPage });
@@ -15,7 +17,27 @@ export const Route = createFileRoute("/track/$orderId")({ component: TrackPage }
 function TrackPage() {
   const { orderId } = Route.useParams();
   const hydrated = useMimi((s) => s.hydrated);
-  const order = useMimi((s) => s.orders.find((o) => o.id.toLowerCase() === orderId.toLowerCase()));
+  const local = useMimi((s) => s.orders.find((o) => o.id.toLowerCase() === orderId.toLowerCase()));
+  const [remote, setRemote] = useState<Order | null>(null);
+
+  useEffect(() => {
+    let live = true;
+    const load = () => {
+      void getKitchenOrder({ data: { id: orderId } })
+        .then((next) => {
+          if (live && next) setRemote(next);
+        })
+        .catch(() => {});
+    };
+    load();
+    const timer = window.setInterval(load, 8000);
+    return () => {
+      live = false;
+      window.clearInterval(timer);
+    };
+  }, [orderId]);
+
+  const order = remote ?? local;
 
   if (!hydrated) {
     return (

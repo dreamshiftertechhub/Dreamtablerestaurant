@@ -1,6 +1,6 @@
 import { t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { o as require_jsx_runtime } from "../_libs/@radix-ui/react-collection+[...].mjs";
-import { H as cn } from "./router-B3gA6S6q.mjs";
+import { V as cn } from "./router-Cg2LEUbK.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/badge-DPJnkyux.js
 var import_jsx_runtime = require_jsx_runtime();
 var badgeVariants = cva("inline-flex items-center tracking-label text-[10px] font-semibold px-2 py-1", {

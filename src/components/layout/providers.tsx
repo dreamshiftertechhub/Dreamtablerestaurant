@@ -8,7 +8,7 @@ import { FoodModal } from "@/components/food/food-modal";
 export function AppProviders({ children }: { children: ReactNode }) {
   useEffect(() => {
     const result = useMimi.persist.rehydrate();
-    void Promise.resolve(result).then(() => {
+    void Promise.resolve(result).finally(() => {
       useMimi.getState().flushPendingAdds();
     });
   }, []);

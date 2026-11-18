@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-NZYk81nU.js";import{t}from"./site-shell-Be4rTjZG.js";import{t as n}from"./menu-experience-87OZwBFw.js";var r=e();function i(){return(0,r.jsx)(t,{children:(0,r.jsx)(n,{kicker:`The menu`,title:`What are you in the mood for?`})})}export{i as component};

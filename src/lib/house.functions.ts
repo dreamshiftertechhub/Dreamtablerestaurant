@@ -126,6 +126,30 @@ export const removeStaff = createServerFn({ method: "POST" })
     return { ok: true as const };
   });
 
+export const resetKitchen = createServerFn({ method: "POST" })
+  .middleware([authMiddleware])
+  .handler(async () => {
+    const sql = await getSql();
+    await sql`delete from house_members`;
+    return { ok: true as const };
+  });
+
+export const fileKitchenOrder = createServerFn({ method: "POST" })
+  .validator((data: { order: Order }) => data)
+  .handler(async ({ data }) => {
+    const order = data.order;
+    if (!order?.id || !order.customer?.name || !Array.isArray(order.items) || order.items.length === 0) {
+      return { ok: false as const, error: "That order is incomplete." };
+    }
+    const sql = await getSql();
+    await sql`
+      insert into house_orders (id, user_id, payload, status)
+      values (${order.id}, ${"guest"}, ${JSON.stringify(order)}, ${order.status})
+      on conflict (id) do update set payload = excluded.payload, status = excluded.status
+    `;
+    return { ok: true as const };
+  });
+
 export const saveHouseOrder = createServerFn({ method: "POST" })
   .middleware([authMiddleware])
   .validator((data: { order: Order }) => data)
@@ -138,6 +162,17 @@ export const saveHouseOrder = createServerFn({ method: "POST" })
       on conflict (id) do update set payload = excluded.payload, status = excluded.status
     `;
     return { ok: true as const };
+  });
+
+export const getKitchenOrder = createServerFn({ method: "POST" })
+  .validator((data: { id: string }) => data)
+  .handler(async ({ data }) => {
+    const sql = await getSql();
+    const rows = await sql<{ payload: string }>`
+      select payload from house_orders where lower(id) = lower(${data.id}) limit 1
+    `;
+    if (!rows[0]) return null;
+    return JSON.parse(rows[0].payload) as Order;
   });
 
 export const listMyOrders = createServerFn({ method: "GET" })

@@ -2,7 +2,7 @@ import { Heart, Plus } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { formatNaira } from "@/lib/format";
-import type { MenuItem } from "@/data/types";
+import type { MenuItem, Protein } from "@/data/types";
 import { useMimi } from "@/store/use-mimi";
 import { useUi } from "@/store/use-ui";
 import { SpiceDots } from "./spice";
@@ -23,6 +23,7 @@ export function FoodCard({
   const setCart = useUi((s) => s.setCartOpen);
 
   const sold = !item.available;
+  const protein = starterProtein(item);
 
   return (
     <article
@@ -83,12 +84,8 @@ export function FoodCard({
           <button
             type="button"
             disabled={sold}
-            aria-label={item.customizable ? `Customise ${item.name}` : `Add ${item.name} to cart`}
+            aria-label={`Add ${item.name} to cart`}
             onClick={() => {
-              if (item.customizable) {
-                open(item.id);
-                return;
-              }
               add({
                 menuItemId: item.id,
                 name: item.name,
@@ -96,8 +93,9 @@ export function FoodCard({
                 unitPrice: item.price,
                 quantity: 1,
                 extras: [],
+                protein,
               });
-              toast("Added to your order.");
+              toast(`${item.name} added. Open the dish if you want to change it.`);
               setCart(true);
             }}
             className="grid size-11 place-items-center bg-brand text-white transition-opacity hover:bg-brand-dark disabled:opacity-30"
@@ -108,4 +106,13 @@ export function FoodCard({
       </div>
     </article>
   );
+}
+
+function starterProtein(item: MenuItem): Protein | undefined {
+  if (!item.customizable) return undefined;
+  const name = item.name.toLowerCase();
+  if (name.includes("seafood") || name.includes("prawn")) return "prawns";
+  if (name.includes("fish") || name.includes("tilapia")) return "fish";
+  if (name.includes("beef") || name.includes("suya") || name.includes("asun") || name.includes("goat")) return "beef";
+  return "chicken";
 }

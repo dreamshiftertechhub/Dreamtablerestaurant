@@ -400,11 +400,10 @@ export const useMimi = create<MimiState>()(
         })),
     }),
     {
-      name: "dreamtable-v2",
+      name: "dreamtable-v3",
       storage: createJSONStorage(() => localStorage),
       skipHydration: true,
       partialize: (s) => ({
-        items: s.items,
         cart: s.cart,
         promoCode: s.promoCode,
         favouriteIds: s.favouriteIds,

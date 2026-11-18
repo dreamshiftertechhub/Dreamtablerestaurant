@@ -134,7 +134,7 @@ var HEADERS = { TSS_SHELL: "X-TSS_SHELL" };
 * the dev styles URL for route-scoped CSS collection.
 */
 async function getStartManifest(matchedRoutes) {
-	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-CXYmpB9X.mjs");
+	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-DxdRmbno.mjs");
 	const startManifest = tsrStartManifest();
 	let routes = startManifest.routes;
 	routes[rootRouteId];
@@ -156,47 +156,59 @@ async function getStartManifest(matchedRoutes) {
 var manifest = {
 	"04c788ab4083b781b0c10b4b3e42530994cc7239787925c2ca436c881cf14d4c": {
 		functionName: "listPassCalls_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	},
 	"2102d7ecf4f704752bad2be36be4e1afb86eb60d99f49d835b0d7bb11b41cae6": {
 		functionName: "setPassCall_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	},
 	"32ae221cc0abce89319d8fb5a8f572b01227c0c3fe77e75a4fc7ad7c325a39b3": {
 		functionName: "removeStaff_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	},
 	"4ccb6fc1addf5ae192997246738110549c4a68717894426b4a8df4f98f890aad": {
 		functionName: "saveHouseOrder_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
+	},
+	"5bab000e38c415289bf59f32b0b20bbb2e8c6061e07d71e7607448dbd7cb2bea": {
+		functionName: "fileKitchenOrder_createServerFn_handler",
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	},
 	"60cdfa6234c9666800380b6fe381131b95670243d81d9fe97f1f0e6a9308a192": {
 		functionName: "listStaff_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	},
 	"6381f83f0ce2202f5aa85a83a6e75394a4689592e7535045b204fb75ca15172f": {
 		functionName: "claimHouse_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	},
 	"83cc12bcc23e4c891715bfc206c7d527e5d6a859e1facbdecacedb0e38f59703": {
 		functionName: "setHouseOrderStatus_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	},
 	"c2eb1e4609f219a45a60972fbc7ebabcb4023abd88a41c2fdeed460fdd5c5166": {
 		functionName: "addStaff_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
+	},
+	"e1d3526cc039327a6cafafe86b151f0b54439910a1cec3fa379b1ecc56a9fd14": {
+		functionName: "resetKitchen_createServerFn_handler",
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	},
 	"ee9b6e32ddd38efb436e9a0e5f57af496b259599fa4e50260b0ea3aea66dd065": {
 		functionName: "listMyOrders_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	},
 	"eeabd46252a53ee76d320f409619bfaa23c7bbf18480fc585df5f92201e3c2b2": {
 		functionName: "getMySeat_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	},
 	"f30969d1d62b594dcecc78dee15155f2a67fc86feef204041a680a99944eeebb": {
 		functionName: "listHouseOrders_createServerFn_handler",
-		importer: () => import("./house.functions-B3EgKraE.mjs")
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
+	},
+	"f6a03062ec9246c47b4f45681d8900951cc08240a28829147306539f3a4e6ca8": {
+		functionName: "getKitchenOrder_createServerFn_handler",
+		importer: () => import("./house.functions-CFdzhJNW.mjs")
 	}
 };
 async function getServerFnById(id, access) {
@@ -1601,7 +1613,7 @@ var getBaseManifest = getProdBaseManifest;
 var createEarlyHintsForRequest = createEarlyHintsCollector;
 async function loadEntries() {
 	const [routerEntry, startEntry, pluginAdapters] = await Promise.all([
-		import("./router-B3gA6S6q.mjs").then((n) => n.t),
+		import("./router-Cg2LEUbK.mjs").then((n) => n.t),
 		import("./start-5Z2QO8AU.mjs"),
 		import("./empty-plugin-adapters-D9UWiqvJ.mjs")
 	]);
